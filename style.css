@@ -1,0 +1,45 @@
+
+html,
+.wooper.button a {
+    cursor: url("wooper-cursor.png"), auto;
+}
+
+/* taken from previous project with minor edits     */
+.wooperbutton {
+    /* display: block; */
+    display:flex;
+    align-items: center;
+    background-color: rgba(109, 149, 235, 0.692);
+    border-color: rgb(123, 183, 183);
+    border-width:8px;
+    text-align: center; 
+    border-radius: 20px;
+    width: 800px;
+    padding: 10px;
+    font-size: 80px;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    border-style: inset;
+    margin-left: 550px;
+    margin-top: 300px;
+    text-decoration: none;
+}
+/* also borrowed */
+.homebutton {
+    /* display: block; */
+    display:block;
+    background-color: rgba(109, 149, 235, 0.692);
+    border-color: rgb(123, 183, 183);
+    border-width: 6px;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 30px;
+    width: 190px;
+    padding: 10px;
+    font-size: 24px;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    border-style: inset;
+    margin: 10px;
+    text-decoration: none;
+}
