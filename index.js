@@ -12,7 +12,13 @@
 //     Can spend money on things such as stores etc
 //     Makes money with Wooper clicker (basically petting Wooper)
 
-
+let money = 0
+function moneyCounter() {
+    document.getElementById("money").textContent = money 
+}
+function getMoney() {
+    money = money+0.01
+}
 
 
 
@@ -32,6 +38,6 @@
 //      Wooper needs to be able to walk around, interact when clicked, walk around the screen properly(i.e not going through walls), 
 //      interact with other items(sleep in bed, splash in pool). 
 //      Need random generated actions for Wooper(using functions, like walk forward) 
-let food = 10
+
 
 
