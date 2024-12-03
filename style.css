@@ -7,10 +7,16 @@ html,
 body{
     background-image: url("Wooper-Wallpaper.jpg")
 }
-
+/* All of this stuff is used to keep the button on the center until next comment */
 .full {
     height: 100vh;
     width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#randomMover {
     position: absolute;
     left: 0;
     top: 0;

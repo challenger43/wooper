@@ -17,7 +17,8 @@ function moneyCounter() {
     document.getElementById("money").textContent = money 
 }
 function getMoney() {
-    money = money+0.01
+    money = money + 0.01
+    console.log(money)
 }
 
 
@@ -39,5 +40,11 @@ function getMoney() {
 //      interact with other items(sleep in bed, splash in pool). 
 //      Need random generated actions for Wooper(using functions, like walk forward) 
 
+let randomMover = document.getElementById("randomMover")  //this function imports the element randomMover from my html
+// this stuff is a test to show how everything works 
+function moveRandomMover(){
+    randomMover.style.left = Math.floor(Math.random()*100) + 'px'  //px are neccesary to move it left/right by pixels- in this it moves from -99-->99px at a time. If I were to set it to percent it would move the percentage of the width of the screen
+    randomMover.style.top = Math.floor(Math.random()*100) + 'px' //floor rounds the value to the nearest integer. math.random is the thing that randomly selects this stuff.
+}
 
-
+setInterval(moveRandomMover, 1000) //each 1 = one millisecond so 1000 is one per second. our thing moves once per second at the moment. 
