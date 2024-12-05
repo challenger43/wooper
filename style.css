@@ -26,6 +26,10 @@ html,
     top: 0;
 }
 
+#moneyclick{
+    width: 155px;
+}
+
 
 #wooperSprite {
     position: absolute;
@@ -33,13 +37,6 @@ html,
     top: 250px;
     width: 35%;
     transition: left ease-in-out 0.3s;
-}
-
-.money{
-    size: 1%;
-    position: absolute;
-    left: 0;
-    top: 0;
 }
 
 .flex {

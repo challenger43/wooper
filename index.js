@@ -13,9 +13,12 @@
 //     Makes money with Wooper clicker (basically petting Wooper)
 
 let money = 0
+let       woopcoin = "woopcoin"
+    money = money + 1   
+    let display = woopcoin + money 
 function moneyCounter() {
-    document.getElementById("money").textContent = money 
-    money = money + 1
+    document.getElementById("money").textContent = display 
+   money = money+1
     console.log((money / 100).toFixed(2))
 }
 
@@ -59,7 +62,7 @@ function moneyCounter() {
 let wooperSprite = document.getElementById("wooperSprite")
 
 function moveWooperSprite(){
-    wooperSprite.style.left = Math.floor(Math.random()*900) +'px'
+    wooperSprite.style.left = Math.floor(Math.random()*700) +'px'
 }
 
 setInterval(moveWooperSprite, 1000, Math.floor(Math.random()*8000))
