@@ -29,8 +29,17 @@ html,
 
 #wooperSprite {
     position: absolute;
-    left: 500;
-    top: 10
+    left: 500px;
+    top: 250px;
+    width: 35%;
+    transition: left ease-in-out 0.3s;
+}
+
+.money{
+    size: 1%;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .flex {

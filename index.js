@@ -15,8 +15,8 @@
 let money = 0
 function moneyCounter() {
     document.getElementById("money").textContent = money 
-    money = money + 0.01
-    console.log(money)
+    money = money + 1
+    console.log((money / 100).toFixed(2))
 }
 
 
@@ -48,10 +48,18 @@ function moneyCounter() {
 // setInterval(moveRandomMover, 1000) //each 1 = one millisecond so 1000 is one per second. our thing moves once per second at the moment. 
 
 
+// let wooperSprite = document.getElementById("wooperSprite")
+
+// function moveWooperSprite(){
+//     wooperSprite.style.left = Math.floor(Math.random()*1000) +'px'
+// }
+
+// setInterval(moveWooperSprite, 5000)
+
 let wooperSprite = document.getElementById("wooperSprite")
 
 function moveWooperSprite(){
-    wooperSprite.style.left = Math.floor(Math.random()*100) +'%'
+    wooperSprite.style.left = Math.floor(Math.random()*900) +'px'
 }
 
-setInterval(moveWooperSprite, 1000)
+setInterval(moveWooperSprite, 1000, Math.floor(Math.random()*8000))
