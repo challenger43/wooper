@@ -4,8 +4,12 @@ html,
     cursor: url("wooper-cursor.png"), auto;
 }
 
-body{
+.background-main-page{
     background-image: url("Wooper-Wallpaper.jpg")
+}
+
+.wooper-page{
+    background-color: white;
 }
 /* All of this stuff is used to keep the button on the center until next comment */
 .full {
@@ -20,6 +24,13 @@ body{
     position: absolute;
     left: 0;
     top: 0;
+}
+
+
+#wooperSprite {
+    position: absolute;
+    left: 500;
+    top: 10
 }
 
 .flex {
