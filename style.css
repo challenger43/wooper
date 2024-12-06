@@ -86,4 +86,6 @@ html,
     text-decoration: none;
 }
 
-#storecost
+#storecost{
+    color: green;
+}
