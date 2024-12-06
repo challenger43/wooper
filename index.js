@@ -18,7 +18,7 @@ let       woopcoin = "woopcoin"
     let display = woopcoin + money 
 function moneyCounter() {
     document.getElementById("money").textContent = display 
-   money = money+1
+   money = money + 1
     console.log((money / 100).toFixed(2))
 }
 
@@ -29,9 +29,12 @@ function moneyCounter() {
 // Food treats, drinks etc(eating mechanics) -Emilia 
 //      Wooper food(pop out menu, need to interact with money)
 //       Feeding Wooper increases money 
-let foodcost = money - 1 
-function 
 
+function foodcostspent(){
+    console.log("button clicked")
+    let foodcost = money - 1 
+
+}
 
 
 
