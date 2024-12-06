@@ -29,6 +29,8 @@ function moneyCounter() {
 // Food treats, drinks etc(eating mechanics) -Emilia 
 //      Wooper food(pop out menu, need to interact with money)
 //       Feeding Wooper increases money 
+let foodcost = money - 1 
+function 
 
 
 
