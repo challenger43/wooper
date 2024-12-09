@@ -39,17 +39,8 @@ function Moneyleft(){
     if (money<0) {
         document.getElementById("money").textContent = "FAILURE"
     }
-    console.log (moneyspent)
 }
 
-
-
-
-
-// Wooper general activity -Isabella 
-//      Wooper needs to be able to walk around, interact when clicked, walk around the screen properly(i.e not going through walls), 
-//      interact with other items(sleep in bed, splash in pool). 
-//      Need random generated actions for Wooper(using functions, like walk forward) 
 
 // let randomMover = document.getElementById("randomMover")  //this function imports the element randomMover from my html
 // // this stuff is a test to show how everything works 
