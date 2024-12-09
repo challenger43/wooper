@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <title>The Place Where the Wooper Actually is</title>
+    <title>Woop Woop</title>
+    
 </head>
-<body class="wooper-page">
+<body class="wooper-page" id="scenery">
     <!-- <a href="index.html" class="homebutton">"Please don't leave🥺"</a>   -->
     
     <!-- <div id="randomMover">test</div> (this is a remnant of our original tester)-->
@@ -14,8 +15,14 @@
      <div id="wooperSprite">
     <img id="wooperSprite" src="content-wooper.png" alt = "normal_wooper"> 
     </div>
-    <div id="money"></div>
-   <img id="moneyclick" onclick = "moneyCounter()" src="smile-wooper.png" alt = "wooper coin"/>   
-    <script src="index.js"></script>
+    <div class="money"></div>
+    <p id="money"> woopcoin 0 </p>
+   <img id="moneyclick" onClick = "moneyCounter()" src="smile-wooper.png" alt = "wooper coin"/>   
+   <button onClick = "Moneyleft()"> shop </button>
+   <script src="index.js"></script>
+
+
+
+
 </body>
 </html>     

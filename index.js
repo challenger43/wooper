@@ -13,12 +13,13 @@
 //     Makes money with Wooper clicker (basically petting Wooper)
 
 let money = 0
-let       woopcoin = "woopcoin"
-    money = money + 1   
-    let display = woopcoin + money 
-function moneyCounter() {
-    document.getElementById("money").textContent = display 
-   money = money+1
+let woopcoin = "woopcoin"
+let purchase = 100
+      
+    let display = woopcoin + " " + money/100 
+function moneyCounter() {       
+    money = money + 1
+    document.getElementById("money").textContent = woopcoin + " " + money/purchase
     console.log((money / 100).toFixed(2))
 }
 
@@ -30,7 +31,16 @@ function moneyCounter() {
 //      Wooper food(pop out menu, need to interact with money)
 //       Feeding Wooper increases money 
 
-
+let cost = ""
+let moneyspent = woopcoin - cost
+function Moneyleft(){
+    money = money-5
+    document.getElementById("money").textContent = woopcoin + " " + money/purchase
+    if (money<0) {
+        document.getElementById("money").textContent = "FAILURE"
+    }
+    console.log (moneyspent)
+}
 
 
 
@@ -61,8 +71,16 @@ function moneyCounter() {
 
 let wooperSprite = document.getElementById("wooperSprite")
 
+const pixelsPerSecond = 150
 function moveWooperSprite(){
-    wooperSprite.style.left = Math.floor(Math.random()*700) +'px'
+    let prev = Number(wooperSprite.style.left.substring(0,wooperSprite.style.left.length-2))
+    let curr = Math.floor(Math.random()*700)
+    let time = Math.abs(prev-curr)/pixelsPerSecond
+    wooperSprite.style.transitionDuration = time.toFixed(2) + "s"
+    wooperSprite.style.left = curr + "px"
+
 }
 
-setInterval(moveWooperSprite, 1000, Math.floor(Math.random()*8000))
+setInterval(moveWooperSprite, 3000, Math.floor(Math.random()*10000))
+
+

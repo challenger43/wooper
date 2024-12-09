@@ -1,6 +1,6 @@
 
-html,
-.wooper.button a {
+#yes-wooper-cursor,
+.wooperbutton a {
     cursor: url("wooper-cursor.png"), auto;
 }
 
@@ -83,5 +83,29 @@ html,
     font-family: 'Courier New', Courier, monospace;
     border-style: inset;
     margin: 10px;
+    text-decoration: none;
+}
+
+#scenery{
+    background-image: url("BackGround .png")
+}
+
+
+
+.shopbutton{
+     
+    display:flex;
+    align-items: center;
+    background-color: rgba(109, 149, 235, 0.692);
+    border-color: rgb(123, 183, 183);
+    border-width:8px;
+    text-align: center; 
+    border-radius: 20px;
+    width: 80px;
+    padding: 10px;
+    font-size: 50px;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    border-style: inset;
     text-decoration: none;
 }
