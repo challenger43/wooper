@@ -54,6 +54,7 @@ function FeedDoughnut(){
     }
 
 }
+
 function FeedMushroom(){
     money = money + 5
    
@@ -84,6 +85,8 @@ function FeedMushroom(){
 
 let wooperSprite = document.getElementById("wooperSprite") //grabs wooperSprite from the html
 
+let canMove = true
+
 const pixelsPerSecond = 150 //the amount of pixels wooper can move per second
 function moveWooperSprite(){
     let prev = Number(wooperSprite.style.left.substring(0,wooperSprite.style.left.length-2))  //number makes it a number, substring makes a string inside of a string  
@@ -93,12 +96,16 @@ function moveWooperSprite(){
     wooperSprite.style.transitionDuration = time.toFixed(2) + "s" //links back to the css to control the wooper moving, s changes it to seconds and sets the time that css needs to move wooper
     wooperSprite.style.left = curr + "px" //sets the current value to pixels
     //if positive go left if negative go right
-    if (direction =-1){
-        wooperSprite.style.transform = 
+    if (direction == -1){
+        wooperSprite.children[0].style.transform = "rotateY(0deg)"
+    } else {
+        wooperSprite.children[0].style.transform = "rotateY(180deg)"
     }
+    setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000 + 1000)
 
 }
+moveWooperSprite();
 
-setInterval(moveWooperSprite, 1000, Math.floor(Math.random()*10000)) //picks how often wooper moves
+// setInterval(moveWooperSprite, 1000, Math.floor(Math.random()*10000)) //picks how often wooper moves
 
 

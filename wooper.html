@@ -12,10 +12,15 @@
     
     <!-- <div id="randomMover">test</div> (this is a remnant of our original tester)-->
     <!-- This will be the button -->   
-     <div id="wooperSprite">
-    <img id="wooperSprite" onclick = "moneyCounter()" src="content-wooper.png" alt = "normal_wooper"> 
+    <div id="wooperSprite">
+        <img class="hat" src="tophat1.png" alt="top hat"> 
+        <img class="wooper" onclick = "moneyCounter()" src="content-wooper.png" alt = "normal_wooper"> 
     </div>
-
+    <figure>
+        <figcaption>wooper</figcaption>
+        <audio controls src="woopermusic.mp3"></audio>
+        
+      </figure>
     <div class="money">
     <p id="money"> woopcoin 0 </p>
     <img id="moneyclick"  src="woop-coin.png" alt = "wooper coin"/>   
@@ -23,7 +28,7 @@
     <div id="foodcost"> 
     <button onclick ="moneyLeft()"> Shop</button> 
     <img onclick = "FeedDoughNut()" id = "donut" src="donut.png" alt="doughnut" >
-    <img onclick = "FeedMushroom()" id="mushroom" src="mushroom.png" alt="mushroomPic">
+    <img onclick = "FeedMushroom()" id="mushroom" src="mushroom1.png" alt="mushroomPic">
 
     <script src="index.js"></script>
 
