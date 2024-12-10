@@ -1,7 +1,6 @@
 // Petting Wooper-Sydney CODE HERE
-//      Petting Wooper changes Wooper's face expression
-//      Hearts come out depending on how ferociously you pet it. 
-//      Gets money from this(which needs to be linked back to 
+//  Putting clothes on wooper
+//      i.e hat
 
 
     
@@ -15,8 +14,8 @@
 let money = 0
 let woopcoin = "woopcoin"
 let purchase = 100
-      
-    let display = woopcoin + " " + money/100 
+let price = 5
+let display = woopcoin + " " + money/100 
 function moneyCounter() {       
     money = money + 1
     document.getElementById("money").textContent = woopcoin + " " + money/purchase
@@ -31,15 +30,36 @@ function moneyCounter() {
 //      Wooper food(pop out menu, need to interact with money)
 //       Feeding Wooper increases money 
 
-let cost = ""
-let moneyspent = woopcoin - cost
-function Moneyleft(){
-    money = money-5
+
+
+
+function moneyLeft(){
+    price=price*2
+    money = money-price
+    
+    if (money<0) {
+        document.getElementById("money").textContent = "FAILURE"
+        money=-10000000000
+    }
+     else {
+        document.getElementById("money").textContent = woopcoin + " " + money/100
+
+    }
+}
+function FeedDoughnut(){
+    money = money + 10
     document.getElementById("money").textContent = woopcoin + " " + money/purchase
     if (money<0) {
         document.getElementById("money").textContent = "FAILURE"
     }
+
 }
+function FeedMushroom(){
+    money = money + 5
+   
+
+}
+
 
 
 // let randomMover = document.getElementById("randomMover")  //this function imports the element randomMover from my html
@@ -60,18 +80,25 @@ function Moneyleft(){
 
 // setInterval(moveWooperSprite, 5000)
 
-let wooperSprite = document.getElementById("wooperSprite")
+//Isabella- wooper needs random movements, speed, turns ar
 
-const pixelsPerSecond = 150
+let wooperSprite = document.getElementById("wooperSprite") //grabs wooperSprite from the html
+
+const pixelsPerSecond = 150 //the amount of pixels wooper can move per second
 function moveWooperSprite(){
-    let prev = Number(wooperSprite.style.left.substring(0,wooperSprite.style.left.length-2))
+    let prev = Number(wooperSprite.style.left.substring(0,wooperSprite.style.left.length-2))  //number makes it a number, substring makes a string inside of a string  
     let curr = Math.floor(Math.random()*700)
-    let time = Math.abs(prev-curr)/pixelsPerSecond
-    wooperSprite.style.transitionDuration = time.toFixed(2) + "s"
-    wooperSprite.style.left = curr + "px"
+    let direction = Math.sign(prev-curr)
+    let time = Math.abs(prev-curr)/pixelsPerSecond //takes the distance between wooper's previous location to wooper's current location, then dividing it by the pixels per second to find the total time wooper needs to get to the new location
+    wooperSprite.style.transitionDuration = time.toFixed(2) + "s" //links back to the css to control the wooper moving, s changes it to seconds and sets the time that css needs to move wooper
+    wooperSprite.style.left = curr + "px" //sets the current value to pixels
+    //if positive go left if negative go right
+    if (direction =-1){
+        wooperSprite.style.transform = 
+    }
 
 }
 
-setInterval(moveWooperSprite, 3000, Math.floor(Math.random()*10000))
+setInterval(moveWooperSprite, 1000, Math.floor(Math.random()*10000)) //picks how often wooper moves
 
 

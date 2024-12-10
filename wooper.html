@@ -13,20 +13,21 @@
     <!-- <div id="randomMover">test</div> (this is a remnant of our original tester)-->
     <!-- This will be the button -->   
      <div id="wooperSprite">
-    <img id="wooperSprite" src="content-wooper.png" alt = "normal_wooper"> 
+    <img id="wooperSprite" onclick = "moneyCounter()" src="content-wooper.png" alt = "normal_wooper"> 
     </div>
 
-    <div class="money"></div>
+    <div class="money">
     <p id="money"> woopcoin 0 </p>
-    <button onclick = "Moneyleft()"> shop </button>
-    <img id="moneyclick" onclick = "moneyCounter()" src="smile-wooper.png" alt = "wooper coin"/>   
-
+    <img id="moneyclick"  src="woop-coin.png" alt = "wooper coin"/>   
+    </div>
     <div id="foodcost"> 
-    <button onclick ="foodcostspent()"> Shop</button> 
-
+    <button onclick ="moneyLeft()"> Shop</button> 
+    <img onclick = "FeedDoughNut()" id = "donut" src="donut.png" alt="doughnut" >
+    <img onclick = "FeedMushroom()" id="mushroom" src="mushroom.png" alt="mushroomPic">
 
     <script src="index.js"></script>
 
     </div> 
+    
 </body>
 </html>     

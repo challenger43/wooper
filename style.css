@@ -37,6 +37,8 @@
     top: 250px;
     width: 35%;
     transition: left ease-in-out 0.3s;
+    transform: rotateY(180deg);
+
 }
 
 .flex {
@@ -108,4 +110,16 @@
     font-family: 'Courier New', Courier, monospace;
     border-style: inset;
     text-decoration: none;
+}
+
+#donut{
+    height: 79px;
+    width: 79px;
+
+}
+
+#mushroom{
+    height: 79px;
+    width: 79px;
+
 }
