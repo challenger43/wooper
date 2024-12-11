@@ -12,7 +12,7 @@
 //     Makes money with Wooper clicker (basically petting Wooper)
 
 let money = 0
-let woopcoin = "woopcoin"
+let woopcoin = "Woopcoin: "
 let purchase = 100
 let price = 5
 let display = woopcoin + " " + money/100 
