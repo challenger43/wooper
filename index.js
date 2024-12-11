@@ -3,7 +3,7 @@
 //      i.e hat needs to appear/disappear depending on which hat is selected in the store
 
 
-    
+
 
 // Money - Khai
 //     Needs to be able to retain information(if possible)
@@ -15,10 +15,10 @@ let money = 0
 let woopcoin = "Woopcoin: "
 let purchase = 100
 let price = 5
-let display = woopcoin + " " + money/100 
-function moneyCounter() {       
+let display = woopcoin + " " + money / 100
+function moneyCounter() {
     money = money + 1
-    document.getElementById("money").textContent = woopcoin + " " + money/purchase
+    document.getElementById("money").textContent = woopcoin + " " + money / purchase
     console.log((money / 100).toFixed(2))
 }
 
@@ -33,28 +33,30 @@ function moneyCounter() {
 
 
 
-function moneyLeft(){
-    price=price*2
-    money = money-price
-    
-    if (money<0) {
+function moneyLeft() {
+    price = price * 2
+    money = money - price
+
+    if (money < 0) {
         document.getElementById("money").textContent = "FAILURE"
-        money=-10000000000
+        money = -10000000000
     }
-     else {
-        document.getElementById("money").textContent = woopcoin + " " + money/100
+    else {
+        document.getElementById("money").textContent = woopcoin + " " + money / 100
 
     }
 }
-function FeedDoughnut(){
+dragElement(document.getElementById("DragFood"));
+
+function FeedDoughnut() {
     money = money + 10
-  
+
 
 }
 
-function FeedMushroom(){
+function FeedMushroom() {
     money = money + 5
-   
+
 
 }
 
@@ -85,19 +87,19 @@ let canMove = true
 let wooperSprite = document.getElementById("wooperSprite") //grabs wooperSprite from the html
 
 const pixelsPerSecond = 150 //the amount of pixels wooper per second
-function moveWooperSprite(){
-    let prev = Number(wooperSprite.style.left.substring(0,wooperSprite.style.left.length-2))  //number makes it a number, substring makes a string inside of a string  
-    let curr = Math.floor(Math.random()*700)
-    let direction = Math.sign(prev-curr) //sign makes it so it will either end up being -1 or positive 1, based on the value inside the parentheses
-    let time = Math.abs(prev-curr)/pixelsPerSecond //takes the distance between wooper's previous location to wooper's current location, then dividing it by the pixels per second to find the total time wooper needs to get to the new location
+function moveWooperSprite() {
+    let prev = Number(wooperSprite.style.left.substring(0, wooperSprite.style.left.length - 2))  //number makes it a number, substring makes a string inside of a string  
+    let curr = Math.floor(Math.random() * 700)
+    let direction = Math.sign(prev - curr) //sign makes it so it will either end up being -1 or positive 1, based on the value inside the parentheses
+    let time = Math.abs(prev - curr) / pixelsPerSecond //takes the distance between wooper's previous location to wooper's current location, then dividing it by the pixels per second to find the total time wooper needs to get to the new location
     wooperSprite.style.transitionDuration = time.toFixed(2) + "s" //links back to the css to control the wooper moving, s changes it to seconds and sets the time that css needs to move wooper
     wooperSprite.style.left = curr + "px" //sets the current value to pixels
     //if positive go left if negative go right
-    if (direction == -1){ //going back to the math sign thing, use double equal signs and -1 represents it being a negative number
+    if (direction == -1) { //going back to the math sign thing, use double equal signs and -1 represents it being a negative number
         wooperSprite.children[0].style.transform = "rotateY(0deg)"
         console.log("it worked")
-         //.children makes it so all children of wooperSprite(everything inside the div with id woopersprite) will follow this rule
-    } else { 
+        //.children makes it so all children of wooperSprite(everything inside the div with id woopersprite) will follow this rule
+    } else {
         wooperSprite.children[0].style.transform = "rotateY(180deg)" //makes it rotate 180degrees y. 
     }
     setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000 + 1000) //sets the amount of time wooper must wait before each iteration of the function

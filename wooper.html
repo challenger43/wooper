@@ -1,38 +1,43 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>Woop Woop</title>
-    
+
 </head>
+
 <body class="wooper-page" id="scenery">
     <!-- <a href="index.html" class="homebutton">"Please don't leave🥺"</a>   -->
-    
+
     <!-- <div id="randomMover">test</div> (this is a remnant of our original tester)-->
-    <!-- This will be the button -->   
+    <!-- This will be the button -->
     <div id="wooperSprite">
-        <img class="hat" src="tophat1.png" alt="top hat"> 
-        <img class="wooper" onclick = "moneyCounter()" src="content-wooper.png" alt = "normal_wooper"> 
+        <img class="hat" src="tophat1.png" alt="top hat">
+        <img class="wooper" onclick="moneyCounter()" src="content-wooper.png" alt="normal_wooper">
     </div>
     <figure class="woopermusic">
         <figcaption>Wooper Music</figcaption>
         <audio controls src="woopermusic.mp3"></audio>
-        
-      </figure>
+
+    </figure>
     <div class="money">
-    <p id="money"> woopcoin 0 </p>
-    <img id="moneyclick"  src="woop-coin.png" alt = "wooper coin"/>   
+        <p id="money"> Woopcoin: 0 </p>
+        <img id="moneyclick" src="woop-coin.png" alt="wooper coin" />
     </div>
-    <div id="foodcost"> 
-    <button class="shopbutton" onclick ="moneyLeft()"> Shop</button> 
-    <img onclick = "FeedDoughNut()" id = "donut" src="donut.png" alt="doughnut" >
-    <img onclick = "FeedMushroom()" id="mushroom" src="mushroom1.png" alt="mushroomPic">
+    <div id="foodcost">
+        <button class="shopbutton" onclick="moneyLeft()"> Shop</button>
+    </div>
+    <div id="DragFood">
+        <img id="donut" src="donut.png" alt="doughnut">
+        <img id="mushroom" src="mushroom1.png" alt="mushroomPic">
 
-    <script src="index.js"></script>
+        <script src="index.js"></script>
 
-    </div> 
-    
+    </div>
+
 </body>
-</html>     
+
+</html>
