@@ -44,7 +44,7 @@
     width: 35%;
     transition: left ease-in-out 0.3s;
     /* transform-style: preserve-3d;    */
-    /* rotateY ease-in-out(180deg); */
+    transform: rotateY ease-in-out(180deg);
 
 }
 
@@ -118,15 +118,18 @@
 }
 
 #donut{
-    position: absolute;
+  
     height: 79px;
     width: 79px;
 
 }
 
 #mushroom{
-    position: absolute;
+   
     height: 79px;
     width: 79px;
 
+}
+#draggingfeature{
+    
 }
