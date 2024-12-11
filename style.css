@@ -118,12 +118,14 @@
 }
 
 #donut{
+    position: absolute;
     height: 79px;
     width: 79px;
 
 }
 
 #mushroom{
+    position: absolute;
     height: 79px;
     width: 79px;
 

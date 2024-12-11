@@ -48,10 +48,7 @@ function moneyLeft(){
 }
 function FeedDoughnut(){
     money = money + 10
-    document.getElementById("money").textContent = woopcoin + " " + money/purchase
-    if (money<0) {
-        document.getElementById("money").textContent = "FAILURE"
-    }
+  
 
 }
 
@@ -83,9 +80,11 @@ function FeedMushroom(){
 
 //Isabella- wooper needs random movements, speed, turns ar
 
+let canMove = true
+
 let wooperSprite = document.getElementById("wooperSprite") //grabs wooperSprite from the html
 
-const pixelsPerSecond = 150 //the amount of pixels wooper can move per second
+const pixelsPerSecond = 150 //the amount of pixels wooper per second
 function moveWooperSprite(){
     let prev = Number(wooperSprite.style.left.substring(0,wooperSprite.style.left.length-2))  //number makes it a number, substring makes a string inside of a string  
     let curr = Math.floor(Math.random()*700)
