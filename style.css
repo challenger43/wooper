@@ -131,8 +131,7 @@
     z-index: 1;
 }
 
-#wooperSprite, 
-#wooperSprite > .wooper {
+#wooperSprite{
     position: absolute;
     left: 500px;
     top: 250px;
