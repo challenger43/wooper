@@ -75,6 +75,10 @@
     border-style: inset;
     text-decoration: none;
 }
+
+.woopermusic{
+    width: 10px;
+}
 /* also borrowed */
 .homebutton {
     /* display: block; */
@@ -118,18 +122,15 @@
 }
 
 #donut{
-  
+    position: absolute;
     height: 79px;
     width: 79px;
 
 }
 
 #mushroom{
-   
+    position: absolute;
     height: 79px;
     width: 79px;
 
-}
-#draggingfeature{
-    
 }
