@@ -30,24 +30,6 @@
     width: 155px;
 }
 
-#wooperSprite>.hat {
-    position: relative;
-    top: 190px;
-    left: 550px;
-    width: 20%;
-    z-index: 1;
-}
-
-#wooperSprite, #wooperSprite > .wooper {
-    position: absolute;
-    left: 500px;
-    top: 250px;
-    width: 35%;
-    transition: left ease-in-out 0.3s;
-    /* transform-style: preserve-3d;    */
-    /* rotateY ease-in-out(180deg); */
-
-}
 
 .flex {
     display: flex;
@@ -139,4 +121,25 @@
 
 #DragFood {
     position: absolute;
+}
+
+#wooperSprite>.hat {
+    position: relative;
+    top: 190px;
+    left: 550px;
+    width: 20%;
+    z-index: 1;
+}
+
+#wooperSprite, 
+#wooperSprite > .wooper {
+    position: absolute;
+    left: 500px;
+    top: 250px;
+    width: 35%;
+    transition: left ease-in-out 0.3s;
+    transform: rotateY(180deg)
+    /* transform-style: preserve-3d;    */
+    /* rotateY ease-in-out(180deg); */
+
 }
