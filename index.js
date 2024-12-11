@@ -95,8 +95,10 @@ function moveWooperSprite(){
     wooperSprite.style.left = curr + "px" //sets the current value to pixels
     //if positive go left if negative go right
     if (direction == -1){ //going back to the math sign thing, use double equal signs and -1 represents it being a negative number
-        wooperSprite.children[0].style.transform = "rotateY(0deg)" //.children makes it so all children of wooperSprite(everything inside the div with id woopersprite) will follow this rule
-    } else { //could use direction != 1 or direction == 1
+        wooperSprite.children[0].style.transform = "rotateY(0deg)"
+        console.log("it worked")
+         //.children makes it so all children of wooperSprite(everything inside the div with id woopersprite) will follow this rule
+    } else { 
         wooperSprite.children[0].style.transform = "rotateY(180deg)" //makes it rotate 180degrees y. 
     }
     setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000 + 1000) //sets the amount of time wooper must wait before each iteration of the function
