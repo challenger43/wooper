@@ -1,16 +1,16 @@
-
 #yes-wooper-cursor,
 .wooperbutton a {
     cursor: url("wooper-cursor.png"), auto;
 }
 
-.background-main-page{
+.background-main-page {
     background-image: url("Wooper-Wallpaper.jpg")
 }
 
-.wooper-page{
+.wooper-page {
     background-color: white;
 }
+
 /* All of this stuff is used to keep the button on the center until next comment */
 .full {
     height: 100vh;
@@ -26,10 +26,11 @@
     top: 0;
 }
 
-#moneyclick{
+#moneyclick {
     width: 155px;
 }
-#wooperSprite > .hat { 
+
+#wooperSprite>.hat {
     position: relative;
     top: 190px;
     left: 550px;
@@ -37,15 +38,14 @@
     z-index: 1;
 }
 
-#wooperSprite,
- #wooperSprite > .wooper {
+#wooperSprite, #wooperSprite > .wooper {
     position: absolute;
     left: 500px;
     top: 250px;
     width: 35%;
     transition: left ease-in-out 0.3s;
     /* transform-style: preserve-3d;    */
-    /* transform: rotateY(180deg); */
+    /* rotateY ease-in-out(180deg); */
 
 }
 
@@ -61,12 +61,12 @@
 /* taken from previous project with minor edits     */
 .wooperbutton {
     /* display: block; */
-    display:flex;
+    display: flex;
     align-items: center;
     background-color: rgba(109, 149, 235, 0.692);
     border-color: rgb(123, 183, 183);
-    border-width:8px;
-    text-align: center; 
+    border-width: 8px;
+    text-align: center;
     border-radius: 20px;
     width: 800px;
     padding: 10px;
@@ -76,10 +76,15 @@
     border-style: inset;
     text-decoration: none;
 }
+
+.woopermusic {
+    width: 10px;
+}
+
 /* also borrowed */
 .homebutton {
     /* display: block; */
-    display:block;
+    display: block;
     background-color: rgba(109, 149, 235, 0.692);
     border-color: rgb(123, 183, 183);
     border-width: 6px;
@@ -96,38 +101,42 @@
     text-decoration: none;
 }
 
-#scenery{
+#scenery {
     background-image: url("BackGround .png")
 }
 
 
 
-.shopbutton{
-     
-    display:flex;
+.shopbutton {
+    display: flex;
     align-items: center;
     background-color: rgba(109, 149, 235, 0.692);
     border-color: rgb(123, 183, 183);
-    border-width:8px;
-    text-align: center; 
+    border-width: 8px;
+    text-align: center;
     border-radius: 20px;
-    width: 80px;
     padding: 10px;
-    font-size: 50px;
+    font-size: 20px;
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
     border-style: inset;
     text-decoration: none;
 }
 
-#donut{
+#donut {
+
     height: 79px;
     width: 79px;
 
 }
 
-#mushroom{
+#mushroom {
+
     height: 79px;
     width: 79px;
 
+}
+
+#DragFood {
+    position: absolute;
 }
