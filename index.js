@@ -25,12 +25,9 @@ function moneyCounter() {
 
 
 
-
 // Food treats, drinks etc(eating mechanics) -Emilia 
 //      Wooper food(pop out menu, need to interact with money)
 //       Feeding Wooper increases money 
-
-
 
 
 function moneyLeft() {
@@ -46,48 +43,42 @@ function moneyLeft() {
 
     }
 }
-dragElement(document.getElementById("DragFood"));
 
-function dragElement(elmnt){
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-      elmnt.onmousedown = dragMouseDown;
-    }
-    function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.onmousemove = elementDrag;
-      }
-      function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-      function closeDragElement() {
-        document.onmouseup = null;
-        document.onmousemove = null;
-      }
-    }
-function FeedDoughnut(){
+const els = document.querySelectorAll(".DragFood");
+els.forEach((name) => {
+  dragElement(name);
+});
 
-    money = money + 10
+function dragElement(elmnt) {
+  var pos1 = 0,
+    pos2 = 0,
+    pose3 = 0,
+    pose4 = 0,
+  elmnt.onmousedown = dragMouseDown;
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+  }
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }
-
-function FeedMushroom() {
-    money = money + 5
-}
-
-
 
 // let randomMover = document.getElementById("randomMover")  //this function imports the element randomMover from my html
 // // this stuff is a test to show how everything works 
@@ -115,6 +106,7 @@ let wooperSprite = document.getElementById("wooperSprite") //grabs wooperSprite 
 
 const pixelsPerSecond = 150 //the amount of pixels wooper per second
 function moveWooperSprite() {
+    console.log("woop")
     let prev = Number(wooperSprite.style.left.substring(0, wooperSprite.style.left.length - 2))  //number makes it a number, substring makes a string inside of a string  
     let curr = Math.floor(Math.random() * 700)
     let direction = Math.sign(prev - curr) //sign makes it so it will either end up being -1 or positive 1, based on the value inside the parentheses
@@ -122,18 +114,31 @@ function moveWooperSprite() {
     wooperSprite.style.transitionDuration = time.toFixed(2) + "s" //links back to the css to control the wooper moving, s changes it to seconds and sets the time that css needs to move wooper
     wooperSprite.style.left = curr + "px" //sets the current value to pixels
     //if positive go left if negative go right
-    if (direction == -1) { //going back to the math sign thing, use double equal signs and -1 represents it being a negative number
-        wooperSprite.children[0].style.transform = "rotateY(0deg)"
-        console.log("it worked")
-        //.children makes it so all children of wooperSprite(everything inside the div with id woopersprite) will follow this rule
-    } else {
-        wooperSprite.children[0].style.transform = "rotateY(180deg)" //makes it rotate 180degrees y. 
+    for (let child of wooperSprite.children) {
+        if (direction == -1) {
+            child.style.transform = "rotateY(180deg)";
+        } else {
+            child.style.transform = "rotateY(0deg)";
+        }
     }
-    setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000 + 1000) //sets the amount of time wooper must wait before each iteration of the function
-
+    setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000) //sets the amount of time wooper must wait before each iteration of the function
 }
+
+//     if (direction == -1) { //going back to the math sign thing, use double equal signs and -1 represents it being a negative number
+//         for (let child of wooperSprite.children){
+//             child.style.transform = "rotateY(180deg)";
+//             console.log("it works")
+//         }
+//         //.children makes it so all children of wooperSprite(everything inside the div with id woopersprite) will follow this rule
+//     } else {
+//         for (let child of wooperSprite.children){
+//             child.style.transform = "rotateY(0deg)";
+//             console.log("it works 2") 
+//         // wooperSprite.children[0].style.transform = "rotateY(180deg)" //makes it rotate 180degrees y. 
+//     }
+//     setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000 + 1000) //sets the amount of time wooper must wait before each iteration of the function
+//     }
+// }
 moveWooperSprite();
 
 // setInterval(moveWooperSprite, 1000, Math.floor(Math.random()*10000)) //picks how often wooper moves
-
-
