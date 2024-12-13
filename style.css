@@ -122,6 +122,7 @@
 #DragFood{
     position: absolute;
 }
+
 #wooperContainer {
     position: absolute;
     left: 0;
@@ -221,4 +222,14 @@
     font-family: serif;
     border-style: inset;
     text-decoration: none
+}
+.ShopPic {
+    height: 120px;
+    width: 120px;
+
+}
+
+#hat-buttons .btn:hover {
+    background-color: orange;
+ 
 }

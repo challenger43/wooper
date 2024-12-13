@@ -45,19 +45,20 @@ moveWooperSprite(); //you need to call the function to make it actually happen.
 let money = 0
 let woopcoin = "Woopcoin: "
 let purchase = 100
-let price = 5
+let mushroomPrice = 5
 let multiplyer = 1
-document.getElementById("cost").textContent = price/100
+document.getElementById("cost").textContent = mushroomPrice/100
 
 function moneyCounter() {
     money = money + multiplyer
     document.getElementById("money").textContent = woopcoin + money/100
-    
 }
 
-function moneyLeft() {
+ 
+function moneyLeft() { 
+  console.log("it worked")
   
-  money = money - price
+  money = money - mushroomPrice
 
   if (money < 0) {
       document.getElementById("money").textContent = "FAILURE"
@@ -70,15 +71,26 @@ function moneyLeft() {
         multiplyer = multiplyer + 5
       }
       document.getElementById("money").textContent = woopcoin + " " + money / 100
-      price = price * 2
-      document.getElementById("cost").textContent = price/100
+      mushroomPrice = mushroomPrice * 2
+      document.getElementById("cost").textContent = mushroomPrice/100
 
   }
 }
+moneyLeft()
+
+
+
 
 //Emi's Code(make elements draggable, ect)
+function show() {
+  document.getElementById('ShopPic')
+      .style.display = "block";
+  document.getElementById('ShopBTN')
+      .style.display = "none";
+}
 
 dragElement(document.getElementById("DragFood"));
+
 
 function dragElement(elmnt) {
   let  pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -136,10 +148,13 @@ function changeHat(cost, newHat){
     let hatEl = document.getElementById(hat)
     if (hat == newHat){
       hatEl.hidden = false
+      console.log("show hat")
     } else {
       hatEl.hidden = true
+      console.log("hide hat")
     }
   }
 }
 changeHat(0, "tophat")
+
 
