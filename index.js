@@ -29,7 +29,7 @@ function moveWooperSprite() {
             child.style.transform = "rotateY(0deg)";
         }
     }
-    setTimeout(moveWooperSprite, time.toFixed(2) * 5000 + Math.random() * 2000) //sets the amount of time wooper must wait before each iteration of the function
+    setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000) //sets the amount of time wooper must wait before each iteration of the function
 }
 moveWooperSprite(); //you need to call the function to make it actually happen.
 

@@ -122,22 +122,6 @@
 #DragFood{
     position: absolute;
 }
-
-#wooperSprite>.hat {
-    position: relative;
-    z-index: 1; /*makes sure the wooper stays on top  */
-    width: 150px;
-    left: 25px;
-    top: 50px;
-}
-
-#wooperSprite > .wooper {
-    position: relative;
-    /* scale: 0.5; */
-    width: 100%;
-    height: auto;
-}
-
 #wooperContainer {
     position: absolute;
     left: 0;
@@ -153,7 +137,21 @@
     width: 200px;
     height: auto;
     top: 400px;
-    border: 1px red solid;
+}
+
+#wooperSprite > .wooper {
+    position: relative;
+    /* scale: 0.5; */
+    width: 100%;
+    height: auto;
+}
+
+#wooperSprite>.hat {
+    position: relative;
+    z-index: 1; /*makes sure the wooper stays on top  */
+    width: 150px;
+    left: 25px;
+    top: 50px;
 }
 
 #wooperSprite > .eleganthat{
@@ -165,8 +163,7 @@
 }
 
 
-.button{
-    display: flex;
+.buttons{ 
     align-items: center;
     background-color: yellow;
     border-color: orange;
@@ -175,6 +172,51 @@
     border-radius: 14px;
     padding: 10px;
     font-size: 20px;
+    color: whitesmoke;
+    font-family: serif;
+    border-style: inset;
+    text-decoration: none
+}
+
+#ElegantHatChange{
+    align-items: center;
+    background-color: rgb(253, 191, 85);
+    border-color: orange;
+    border-width: 6px;
+    text-align: center;
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 12px;
+    color: whitesmoke;
+    font-family: serif;
+    border-style: inset;
+    text-decoration: none
+}
+
+#CroissantChanger{
+    align-items: center;
+    background-color: rgb(253, 191, 85);
+    border-color: orange;
+    border-width: 6px;
+    text-align: center;
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 12px;
+    color: whitesmoke;
+    font-family: serif;
+    border-style: inset;
+    text-decoration: none
+}
+
+#TopHatChanger{
+    align-items: center;
+    background-color: rgb(253, 191, 85);
+    border-color: orange;
+    border-width: 6px;
+    text-align: center;
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 12px;
     color: whitesmoke;
     font-family: serif;
     border-style: inset;
