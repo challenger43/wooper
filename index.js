@@ -47,7 +47,7 @@ let woopcoin = "Woopcoin: "
 let purchase = 100
 let mushroomPrice = 5
 let multiplyer = 1
-document.getElementById("cost").textContent = mushroomPrice/100
+document.getElementById("cost").textContent = "Cost: " + mushroomPrice/100
 
 function moneyCounter() {
     money = money + multiplyer
@@ -62,7 +62,7 @@ function moneyLeft() {
 
   if (money < 0) {
       document.getElementById("money").textContent = "FAILURE"
-      money = money* 100000000
+      money = money* 10
   }
   else {
       if (multiplyer == 1) {
@@ -72,24 +72,21 @@ function moneyLeft() {
       }
       document.getElementById("money").textContent = woopcoin + " " + money / 100
       mushroomPrice = mushroomPrice * 2
-      document.getElementById("cost").textContent = mushroomPrice/100
+      document.getElementById("cost").textContent = "Cost: " + mushroomPrice/100
 
   }
 }
-moneyLeft()
 
 
 
 
 //Emi's Code(make elements draggable, ect)
-function show() {
-  document.getElementById('ShopPic')
-      .style.display = "block";
-  document.getElementById('ShopBTN')
-      .style.display = "none";
+function showshop() {
+ 
 }
 
 dragElement(document.getElementById("DragFood"));
+
 
 
 function dragElement(elmnt) {
@@ -137,7 +134,7 @@ function dragElement(elmnt) {
 //   document.getElementById("tophat").style.visibility="hidden"; 
 // }
 
-let hats = ["tophat", "croissant", "elegant"]
+let hats = ["tophat", "croissant", "elegant", "donut"]
 
 function changeHat(cost, newHat){
   if (cost > money){
@@ -156,5 +153,5 @@ function changeHat(cost, newHat){
   }
 }
 changeHat(0, "tophat")
-
+console.log(money)
 

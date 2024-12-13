@@ -11,8 +11,8 @@
 
 <body class="wooper-page" id="scenery">
     <div class="hat-buttons">
-        <img id ="ShopPic" src="shop.png" alt="Shop Menu">
-        <button id = "TopHatChanger" onclick="changeHat(10,'tophat')">Top   Hat</button>
+        <button id = "TopHatChanger" onclick="changeHat(10,'tophat')">Top Hat</button>
+        <button id = "donutHatChanger" onclick="changeHat(150,'donutHat')">Donut Hat</button>
         <button id  = "CroissantChanger" onclick="changeHat(100,'croissant')">Croissant</button>
         <button id = "ElegantHatChange" onclick="changeHat(200,'elegant')">Elegant Hat</button>
         <!-- <a href="index.html" class="homebutton">"Please don't leave🥺"</a>   -->
@@ -23,8 +23,9 @@
     <div id="wooperContainer">
         <div id="wooperSprite">
             <img class="hat" src="tophat1.png" id="tophat" alt="Top hat">
-            <img class="hat" src="croissant.png" id="croissant" alt="Croissant">
+            <img class="croissantHat" src="croissant.png" id="croissant" alt="Croissant">
             <img class="eleganthat" src="Elegance.png" id="elegant" alt="Elegant Hat">
+            <img class="donutHat" id="donut" src="donut.png" alt="donut">
 
             <img class="wooper" onclick="moneyCounter()" src="content-wooper.png" alt="normal_wooper">
         </div>
@@ -38,14 +39,16 @@
         <img id="moneyclick" src="woop-coin.png" alt="Wooper Coin" />
     </div>
     <div id="foodcost">
-        <button class="shopbutton" onclick="show()" id="ShopBTN">Shop</button>
+        <button class="shopbutton" onclick="showshop()" id="ShopBTN">Shop</button>
     </div>
     <div id="DragFood">
-        <img id="donut" src="donut.png" alt="donut">
         <img id="mushroom" onclick="moneyLeft()" src="mushroom1.png" alt="mushroomPic">
+        <span id="cost"></span>
 
-        <script src="index.js"></script>
+
     </div>
+    <img id="ShopPic" src="shop.png" alt="ShopMenu">
+    <script src="index.js"></script>
     
 </body>
 

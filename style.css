@@ -1,3 +1,7 @@
+html {
+    /* user-select: none; */
+}
+
 #yes-wooper-cursor,
 .wooperbutton a {
     cursor: url("wooper-cursor.png"), auto;
@@ -103,19 +107,16 @@
     font-family: 'Courier New', Courier, monospace;
     border-style: inset;
     text-decoration: none;
+    z-index: 500;
 }
 
-#donut {
 
-    height: 79px;
-    width: 79px;
-
-}
 
 #mushroom {
 
     height: 79px;
     width: 79px;
+    z-index: 801; 
 
 }
 
@@ -126,9 +127,10 @@
 #wooperContainer {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 40px;
     height: 100vh;
     width: 100vw;
+    z-index: 10;
 }
 
 #wooperSprite {
@@ -152,17 +154,32 @@
     z-index: 1; /*makes sure the wooper stays on top  */
     width: 150px;
     left: 25px;
-    top: 50px;
+    top:50px;
 }
 
 #wooperSprite > .eleganthat{
     position: relative;
     width: 150px;
-    left: 25px;
-    top: 50px;
+    left: 30px;
+    top: 85px;
     z-index: 1; /*makes sure the wooper stays on top  */
 }
 
+#wooperSprite > .croissantHat{
+    position: relative;
+    width: 150px;
+    left: 30px;
+    top: 85px;
+    z-index: 1; /*makes sure the wooper stays on top  */
+}
+
+#wooperSprite > .donutHat{
+    position: relative;
+    width: 150px;
+    left: 30px;
+    top: 85px;
+    z-index: 1; /*makes sure the wooper stays on top  */
+}
 
 .buttons{ 
     align-items: center;
@@ -226,10 +243,30 @@
 .ShopPic {
     height: 120px;
     width: 120px;
-
+    z-index: 709;
 }
 
-#hat-buttons .btn:hover {
+
+
+.hat-buttons{
+    z-index: 100;
+
+}
+ .hat-buttons button:hover {
     background-color: orange;
- 
+}
+#donutHatChanger{
+    align-items: center;
+    background-color: rgb(253, 191, 85);
+    border-color: orange;
+    border-width: 6px;
+    text-align: center;
+    border-radius: 14px;
+    padding: 10px;
+    font-size: 12px;
+    color: whitesmoke;
+    font-family: serif;
+    border-style: inset;
+    text-decoration: none;
+    
 }
