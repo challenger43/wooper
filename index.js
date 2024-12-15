@@ -33,6 +33,20 @@ function moveWooperSprite() {
 }
 moveWooperSprite(); //you need to call the function to make it actually happen.
 
+//techincally this is Khai's job but I had extra time so I decided to make the money sync up and update
+let money = 0
+let woopcoin = "Woopcoin: "
+let purchase = 100
+let mushroomPrice = 5
+let multiplyer = 1
+//those variables Khai made
+
+function moneyUpdate() {
+  setInterval(moneyUpdate, 1000)
+  document.getElementById("money").textContent = woopcoin
+  console.log("it worked" + money)
+}
+
 
 
 
@@ -42,18 +56,13 @@ moveWooperSprite(); //you need to call the function to make it actually happen.
 //     Can spend money on things such as stores etc
 //     Makes money with Wooper clicker (basically petting Wooper)
 
-let money = 0
-let woopcoin = "Woopcoin: "
-let purchase = 100
-let mushroomPrice = 5
-let multiplyer = 1
+
 document.getElementById("cost").textContent = "Cost: " + mushroomPrice/100
 
 function moneyCounter() {
     money = money + multiplyer
     document.getElementById("money").textContent = woopcoin + money/100
 }
-
  
 function moneyLeft() { 
   console.log("it worked")
@@ -81,58 +90,15 @@ function moneyLeft() {
 
 
 //Emi's Code(make elements draggable, ect)
-function showshop() {
- 
+function show() { 
+  document.getElementById('ShopPic').style.display="block"
+  console.log("shop button test")
 }
 
-dragElement(document.getElementById("DragFood"));
 
-
-
-function dragElement(elmnt) {
-  let  pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
 // Petting Wooper-Sydney CODE HERE
 //  Putting clothes on wooper
 //      i.e hat needs to appear/disappear depending on which hat is selected in the store
-
-
-// if (itemIsEquipped == "True"){
-//   document.getElementById("tophat").style.visibility="visible";
-// }
-
-// else{
-//   document.getElementById("tophat").style.visibility="hidden"; 
-// }
 
 let hats = ["tophat", "croissant", "elegant", "donut"]
 

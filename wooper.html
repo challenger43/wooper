@@ -11,10 +11,10 @@
 
 <body class="wooper-page" id="scenery">
     <div class="hat-buttons">
-        <button id = "TopHatChanger" onclick="changeHat(10,'tophat')">Top Hat</button>
-        <button id = "donutHatChanger" onclick="changeHat(150,'donutHat')">Donut Hat</button>
-        <button id  = "CroissantChanger" onclick="changeHat(100,'croissant')">Croissant</button>
-        <button id = "ElegantHatChange" onclick="changeHat(200,'elegant')">Elegant Hat</button>
+        <button id = "TopHatChanger" onclick="changeHat(10,'tophat')">Top Hat Cost: Free</button>
+        <button id = "donutHatChanger" onclick="changeHat(100,'donut')">Donut Hat Cost: 100</button>
+        <button id  = "CroissantChanger" onclick="changeHat(150,'croissant')">Croissant Hat Cost: 150</button>
+        <button id = "ElegantHatChange" onclick="changeHat(200,'elegant')">Elegant Hat Cost: 200</button>
         <!-- <a href="index.html" class="homebutton">"Please don't leave🥺"</a>   -->
     </div>
 
@@ -22,11 +22,10 @@
     <!-- This will be the button -->
     <div id="wooperContainer">
         <div id="wooperSprite">
-            <img class="hat" src="tophat1.png" id="tophat" alt="Top hat">
+            <img class="hat" src="tophat1.png" id="tophat" alt="Top Hat">
             <img class="croissantHat" src="croissant.png" id="croissant" alt="Croissant">
             <img class="eleganthat" src="Elegance.png" id="elegant" alt="Elegant Hat">
-            <img class="donutHat" id="donut" src="donut.png" alt="donut">
-
+            <img class="donutHat" src="donut.png" id="donut" alt="Donut">
             <img class="wooper" onclick="moneyCounter()" src="content-wooper.png" alt="normal_wooper">
         </div>
     </div>
@@ -35,19 +34,17 @@
 
 
     <div class="money">
-        <p id="money"> woopcoin 0 </p>
+        <p id="money" class="woop-coin-display"> Woopcoin 0 </p>
         <img id="moneyclick" src="woop-coin.png" alt="Wooper Coin" />
     </div>
     <div id="foodcost">
-        <button class="shopbutton" onclick="showshop()" id="ShopBTN">Shop</button>
+        <button class="shopbutton" onclick= "show()" id="ShopBTN">Shop</button>
     </div>
-    <div id="DragFood">
+    <div id="DragFood"> 
         <img id="mushroom" onclick="moneyLeft()" src="mushroom1.png" alt="mushroomPic">
         <span id="cost"></span>
-
-
     </div>
-    <img id="ShopPic" src="shop.png" alt="ShopMenu">
+    <img id="ShopPic" src= "shop.png" alt="ShopMenu"/>
     <script src="index.js"></script>
     
 </body>

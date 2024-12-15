@@ -1,5 +1,6 @@
+/* hello Mr. SF, I hope you are having a good day. The majority of the CSS was by Isabella and Emilia :) */
 html {
-    /* user-select: none; */
+    user-select: none;
 }
 
 #yes-wooper-cursor,
@@ -23,15 +24,33 @@ html {
     left: 0;
     top: 0;
 }
-
+/* remains of an old tester
 #randomMover {
     position: absolute;
     left: 0;
     top: 0;
-}
+} */
 
 #moneyclick {
-    width: 155px;
+    width: 80px;
+    position: absolute; 
+    right: 0;
+    top: 0;
+}
+
+.woop-coin-display{
+    position: absolute;
+    right: 0;
+    top: 2;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border-style:inset;
+    padding: 3px;
+    background:rgb(170, 240, 240);
+    border-color: green;
+    border-width: 3px;
+    margin-right: 5px; 
+    margin-top: 0px;
 }
 
 
@@ -68,8 +87,7 @@ html {
 }
 
 /* also borrowed */
-.homebutton {
-    /* display: block; */
+/* .homebutton {
     display: block;
     background-color: rgba(109, 149, 235, 0.692);
     border-color: rgb(123, 183, 183);
@@ -85,13 +103,11 @@ html {
     border-style: inset;
     margin: 10px;
     text-decoration: none;
-}
+} */
 
 #scenery {
     background-image: url("BackGround .png")
 }
-
-
 
 .shopbutton {
     display: flex;
@@ -108,20 +124,13 @@ html {
     border-style: inset;
     text-decoration: none;
     z-index: 500;
+    margin: 20px;
 }
-
-
 
 #mushroom {
-
     height: 79px;
     width: 79px;
-    z-index: 801; 
-
-}
-
-#DragFood{
-    position: absolute;
+    z-index: 11; 
 }
 
 #wooperContainer {
@@ -168,105 +177,59 @@ html {
 #wooperSprite > .croissantHat{
     position: relative;
     width: 150px;
-    left: 30px;
+    left: 35px;
     top: 85px;
-    z-index: 1; /*makes sure the wooper stays on top  */
+    z-index: 1; 
 }
 
 #wooperSprite > .donutHat{
     position: relative;
-    width: 150px;
+    width: 150px;   
     left: 30px;
-    top: 85px;
-    z-index: 1; /*makes sure the wooper stays on top  */
+    top: 90px;
+    z-index: 1; 
 }
-
-.buttons{ 
-    align-items: center;
-    background-color: yellow;
-    border-color: orange;
-    border-width: 6px;
-    text-align: center;
-    border-radius: 14px;
-    padding: 10px;
-    font-size: 20px;
-    color: whitesmoke;
-    font-family: serif;
-    border-style: inset;
-    text-decoration: none
-}
-
-#ElegantHatChange{
-    align-items: center;
-    background-color: rgb(253, 191, 85);
-    border-color: orange;
-    border-width: 6px;
-    text-align: center;
-    border-radius: 14px;
-    padding: 10px;
-    font-size: 12px;
-    color: whitesmoke;
-    font-family: serif;
-    border-style: inset;
-    text-decoration: none
-}
-
-#CroissantChanger{
-    align-items: center;
-    background-color: rgb(253, 191, 85);
-    border-color: orange;
-    border-width: 6px;
-    text-align: center;
-    border-radius: 14px;
-    padding: 10px;
-    font-size: 12px;
-    color: whitesmoke;
-    font-family: serif;
-    border-style: inset;
-    text-decoration: none
-}
-
-#TopHatChanger{
-    align-items: center;
-    background-color: rgb(253, 191, 85);
-    border-color: orange;
-    border-width: 6px;
-    text-align: center;
-    border-radius: 14px;
-    padding: 10px;
-    font-size: 12px;
-    color: whitesmoke;
-    font-family: serif;
-    border-style: inset;
-    text-decoration: none
-}
-.ShopPic {
-    height: 120px;
-    width: 120px;
-    z-index: 709;
-}
-
-
 
 .hat-buttons{
+    display:flex;
     z-index: 100;
+    background-color: navy;
+    border-width: 5px;
+    border-color:cadetblue;
+    border-style: solid;
+    width: 690px;
+    padding: 10px;
+    border-radius: 14px;
+    justify-content: center;
+}
 
-}
- .hat-buttons button:hover {
-    background-color: orange;
-}
-#donutHatChanger{
+#TopHatChanger,
+#donutHatChanger,
+#CroissantChanger,
+#ElegantHatChange {
     align-items: center;
-    background-color: rgb(253, 191, 85);
-    border-color: orange;
+    background-color: rgb(185, 245, 255);
+    border-color: rgb(110, 219, 128);
     border-width: 6px;
     text-align: center;
     border-radius: 14px;
     padding: 10px;
     font-size: 12px;
-    color: whitesmoke;
-    font-family: serif;
+    color: black;
+    font-family:monospace;
     border-style: inset;
     text-decoration: none;
-    
+    margin-left: 14px;
+    margin-right: 14px;
 }
+
+
+
+#ShopPic {
+    display: none; 
+    height: 120px;
+    width: 120px;
+    z-index: 2;
+}
+
+
