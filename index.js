@@ -23,7 +23,7 @@ function moveWooperSprite() {
   wooperSprite.style.left = curr + "px" //sets the current value to pixels
   //if positive go left if negative go right
   for (let child of wooperSprite.children) {
-    if (direction == -1) {
+    if (direction == -1 && !child.classList.contains("noFlip")) {
       child.style.transform = "rotateY(180deg)";
     } else {
       child.style.transform = "rotateY(0deg)";
@@ -91,11 +91,10 @@ function moneyLeft() {
 
 
 //Emi's Code
+
 function show() {
-  document.getElementById('ShopPic')
-    .style.display = "block";
-  document.getElementsByClassName('shopbutton')
-    .style.display = "none";
+  let shopEl = document.getElementById('shop')
+  shopEl.hidden = !shopEl.hidden;
 }
 
 
@@ -103,7 +102,7 @@ function show() {
 //  Putting clothes on wooper
 //      i.e hat needs to appear/disappear depending on which hat is selected in the store
 
-let hats = ["tophat", "croissant", "elegant", "donut", "santahat"]
+let hats = ["tophat", "croissant", "elegant", "donut", "santahat", "rowlet", "bow", "headband"]
 
 function changeHat(cost, newHat) {
   if (cost > money) {

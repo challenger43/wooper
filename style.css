@@ -126,14 +126,35 @@ html {
     text-decoration: none;
     z-index: 500;
     margin: 20px;
+    position: relative;
+    z-index: 99999;
 }
 
-#mushroom {
+#ShopPic {
+    position: fixed;
+    top:30px;
+    width: 120px; 
+    height: 120px;
+    left: 10px; 
+    
+
+}
+#mushroomBox {
+    position: relative;
+    top: 50px;
+    left: 20px;
     height: 79px;
     width: 79px;
     z-index: 1111111;
     pointer-events: all;
-    border: 2px solid red;
+}
+
+#mushroom {
+    width: 100%;
+}
+
+#cost{
+    font-family:monospace;
 }
 
 #wooperContainer {
@@ -205,6 +226,30 @@ html {
     z-index: 1;
 }
 
+#wooperSprite>.rowletHat {
+    position: relative;
+    width: 170px;
+    height: 200px;   
+    left: 30px;
+    top: 90px;
+    z-index: 1;
+}
+
+
+#wooperSprite>.bow {
+    position: relative;
+    width: 120px;
+    left: 30px;
+    top: 75px;
+    z-index: 1;
+}
+#wooperSprite> .Headband{
+    position: relative;
+    size: 40px;
+    top: 75px;
+    z-index: 1;
+}
+
 .hat-buttons {
     display: flex;
     z-index: 100;
@@ -212,7 +257,7 @@ html {
     border-width: 5px;
     border-color: cadetblue;
     border-style: solid;
-    width: 690px;
+    width: 890px;
     padding: 10px;
     border-radius: 14px;
     justify-content: center;
@@ -222,7 +267,10 @@ html {
 #donutHatChanger,
 #CroissantChanger,
 #ElegantHatChange,
-#santaHatChanger {
+#santaHatChanger,
+#RowletHatChange,
+#bowChanger,
+#headbandChanger {
     align-items: center;
     background-color: rgb(185, 245, 255);
     border-color: rgb(110, 219, 128);
@@ -238,14 +286,6 @@ html {
     margin-left: 14px;
     margin-right: 14px;
 }
-
-
-
-#ShopPic {
-    display: none;
-
-}
-
 
 .olstyle{
     color: darkblue;
@@ -273,4 +313,5 @@ html {
 .credits{
     font-size: 20px;
     font-family:'Courier New', Courier, monospace;
+    z-index: 59;
 }
