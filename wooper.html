@@ -11,10 +11,11 @@
 
 <body class="wooper-page" id="scenery">
     <div class="hat-buttons">
-        <button id = "TopHatChanger" onclick="changeHat(10,'tophat')">Top Hat Cost: Free</button>
-        <button id = "donutHatChanger" onclick="changeHat(100,'donut')">Donut Hat Cost: 100</button>
-        <button id  = "CroissantChanger" onclick="changeHat(150,'croissant')">Croissant Hat Cost: 150</button>
-        <button id = "ElegantHatChange" onclick="changeHat(200,'elegant')">Elegant Hat Cost: 200</button>
+        <button id="TopHatChanger" onclick="changeHat(10,'tophat')">Top Hat Cost: Free</button>
+        <button id="santaHatChanger" onclick="changeHat(50,'santahat')">Santa Hat Cost: 50</button>
+        <button id="donutHatChanger" onclick="changeHat(100,'donut')">Donut Hat Cost: 100</button>
+        <button id="CroissantChanger" onclick="changeHat(150,'croissant')">Croissant Hat Cost: 150</button>
+        <button id="ElegantHatChange" onclick="changeHat(200,'elegant')">Elegant Hat Cost: 200</button>
         <!-- <a href="index.html" class="homebutton">"Please don't leave🥺"</a>   -->
     </div>
 
@@ -26,6 +27,7 @@
             <img class="croissantHat" src="croissant.png" id="croissant" alt="Croissant">
             <img class="eleganthat" src="Elegance.png" id="elegant" alt="Elegant Hat">
             <img class="donutHat" src="donut.png" id="donut" alt="Donut">
+            <img class="santaHat" src="santahat.png" id="santahat" alt="Santa hat">
             <img class="wooper" onclick="moneyCounter()" src="content-wooper.png" alt="normal_wooper">
         </div>
     </div>
@@ -38,15 +40,15 @@
         <img id="moneyclick" src="woop-coin.png" alt="Wooper Coin" />
     </div>
     <div id="foodcost">
-        <button class="shopbutton" onclick= "show()" id="ShopBTN">Shop</button>
+        <button class="shopbutton" onclick="show()">Shop</button>
+        <img id="ShopPic" src="shop.png" alt="ShopMenu" />
     </div>
-    <div id="DragFood"> 
-        <img id="mushroom" onclick="moneyLeft()" src="mushroom1.png" alt="mushroomPic">
-        <span id="cost"></span>
-    </div>
-    <img id="ShopPic" src= "shop.png" alt="ShopMenu"/>
+    <span id="cost"> </span>
+    <img id="mushroom" onclick="moneyLeft()" src="mushroom1.png" alt="mushroomPic">
+
+
     <script src="index.js"></script>
-    
+
 </body>
 
 </html>

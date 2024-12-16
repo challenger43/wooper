@@ -24,6 +24,7 @@ html {
     left: 0;
     top: 0;
 }
+
 /* remains of an old tester
 #randomMover {
     position: absolute;
@@ -33,23 +34,23 @@ html {
 
 #moneyclick {
     width: 80px;
-    position: absolute; 
+    position: absolute;
     right: 0;
     top: 0;
 }
 
-.woop-coin-display{
+.woop-coin-display {
     position: absolute;
     right: 0;
     top: 2;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
-    border-style:inset;
+    border-style: inset;
     padding: 3px;
-    background:rgb(170, 240, 240);
+    background: rgb(170, 240, 240);
     border-color: green;
     border-width: 3px;
-    margin-right: 5px; 
+    margin-right: 5px;
     margin-top: 0px;
 }
 
@@ -87,7 +88,7 @@ html {
 }
 
 /* also borrowed */
-/* .homebutton {
+.homebutton {
     display: block;
     background-color: rgba(109, 149, 235, 0.692);
     border-color: rgb(123, 183, 183);
@@ -103,7 +104,7 @@ html {
     border-style: inset;
     margin: 10px;
     text-decoration: none;
-} */
+}
 
 #scenery {
     background-image: url("BackGround .png")
@@ -130,7 +131,9 @@ html {
 #mushroom {
     height: 79px;
     width: 79px;
-    z-index: 11; 
+    z-index: 1111111;
+    pointer-events: all;
+    border: 2px solid red;
 }
 
 #wooperContainer {
@@ -144,14 +147,16 @@ html {
 
 #wooperSprite {
     position: relative;
-    transition: left ease-in-out 0.3s; /*side by side speed */
-    transform: rotateY(180deg); /*flips it */
+    transition: left ease-in-out 0.3s;
+    /*side by side speed */
+    transform: rotateY(180deg);
+    /*flips it */
     width: 200px;
     height: auto;
     top: 400px;
 }
 
-#wooperSprite > .wooper {
+#wooperSprite>.wooper {
     position: relative;
     /* scale: 0.5; */
     width: 100%;
@@ -160,42 +165,52 @@ html {
 
 #wooperSprite>.hat {
     position: relative;
-    z-index: 1; /*makes sure the wooper stays on top  */
+    z-index: 1;
+    /*makes sure the wooper stays on top  */
     width: 150px;
     left: 25px;
-    top:50px;
+    top: 50px;
 }
 
-#wooperSprite > .eleganthat{
+#wooperSprite>.eleganthat {
     position: relative;
     width: 150px;
     left: 30px;
     top: 85px;
-    z-index: 1; /*makes sure the wooper stays on top  */
+    z-index: 1;
+    /*makes sure the wooper stays on top  */
 }
 
-#wooperSprite > .croissantHat{
+#wooperSprite>.croissantHat {
     position: relative;
     width: 150px;
     left: 35px;
     top: 85px;
-    z-index: 1; 
+    z-index: 1;
 }
 
-#wooperSprite > .donutHat{
+#wooperSprite>.donutHat {
     position: relative;
-    width: 150px;   
+    width: 150px;
     left: 30px;
     top: 90px;
-    z-index: 1; 
+    z-index: 1;
 }
 
-.hat-buttons{
-    display:flex;
+#wooperSprite>.santaHat {
+    position: relative;
+    width: 150px;
+    left: 30px;
+    top: 90px;
+    z-index: 1;
+}
+
+.hat-buttons {
+    display: flex;
     z-index: 100;
     background-color: navy;
     border-width: 5px;
-    border-color:cadetblue;
+    border-color: cadetblue;
     border-style: solid;
     width: 690px;
     padding: 10px;
@@ -206,7 +221,8 @@ html {
 #TopHatChanger,
 #donutHatChanger,
 #CroissantChanger,
-#ElegantHatChange {
+#ElegantHatChange,
+#santaHatChanger {
     align-items: center;
     background-color: rgb(185, 245, 255);
     border-color: rgb(110, 219, 128);
@@ -216,7 +232,7 @@ html {
     padding: 10px;
     font-size: 12px;
     color: black;
-    font-family:monospace;
+    font-family: monospace;
     border-style: inset;
     text-decoration: none;
     margin-left: 14px;
@@ -226,10 +242,35 @@ html {
 
 
 #ShopPic {
-    display: none; 
-    height: 120px;
-    width: 120px;
-    z-index: 2;
+    display: none;
+
 }
 
 
+.olstyle{
+    color: darkblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    background-color:burlywood;
+    width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    border-color:rgb(42, 96, 215);
+    border-style:solid;
+    border-width: 2px;
+    margin: 10px;
+}
+
+.note{
+    font-family: monospace;
+}
+
+.how-to-play-game{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:midnightblue;
+    text-shadow: 3px 2px 2px aquamarine;
+}
+.credits{
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
