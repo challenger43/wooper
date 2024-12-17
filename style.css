@@ -252,12 +252,13 @@ html {
 
 .hat-buttons {
     display: flex;
+    position: relative;
     z-index: 100;
     background-color: navy;
     border-width: 5px;
     border-color: cadetblue;
     border-style: solid;
-    width: 890px;
+    width: 990px;
     padding: 10px;
     border-radius: 14px;
     justify-content: center;
