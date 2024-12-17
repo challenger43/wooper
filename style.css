@@ -134,10 +134,7 @@ html {
 
 #ShopPic {
     position: fixed;
-    top:30px;
-    width: 120px; 
-    height: 120px;
-    left: 10px; 
+    
     
 
 }
@@ -232,9 +229,10 @@ html {
     position: relative;
     width: 170px;
     height: 200px;   
-    left: 30px;
-    top: 90px;
+    left: 25px;
+    top: 135px;
     z-index: 1;
+    transform: scaleX(-1); 
 }
 
 
@@ -247,8 +245,9 @@ html {
 }
 #wooperSprite> .Headband{
     position: relative;
-    size: 40px;
-    top: 75px;
+    width: 90px;
+    top: 63px;
+    left: 40px;
     z-index: 1;
 }
 
