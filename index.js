@@ -29,7 +29,7 @@ function moveWooperSprite() {
       child.style.transform = "rotateY(0deg)";
     }
   }
-  setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000) //sets the amount of time wooper must wait before each iteration of the function
+  setTimeout(moveWooperSprite, time.toFixed(2) * 10000 + Math.random() * 2000) //sets the amount of time wooper must wait before each iteration of the function
 }
 moveWooperSprite(); //you need to call the function to make it actually happen.
 
@@ -97,14 +97,21 @@ function show() {
   shopEl.hidden = !shopEl.hidden;
 }
 
+document.getElementById('hatbutton')
+function show1() {
+  let hatButtonEl = document.getElementById('hatbutton1')
+  hatButtonEl.hidden = !hatButtonEl.hidden;
+}
+
 
 // Sydney CODE HERE
 //  Putting clothes on wooper
 //      i.e hat needs to appear/disappear depending on which hat is selected in the store
 
-let hats = ["tophat", "croissant", "elegant", "donut", "santahat", "rowlet", "bow", "headband"]
+let hats = ["hat", "croissantHat", "eleganthat", "donutHat", "santaHat", "rowletHat", "bow", "Headband"]
 
 function changeHat(cost, newHat) {
+  console.log("changing a hat with cost " + cost + " to hat " + newHat)
   if (cost > money) {
     return;
   }
@@ -120,6 +127,6 @@ function changeHat(cost, newHat) {
     }
   }
 }
-changeHat(0, "tophat")
+changeHat(0, "nohat")
 console.log(money)
 

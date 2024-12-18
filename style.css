@@ -42,7 +42,7 @@ html {
 .woop-coin-display {
     position: absolute;
     right: 0;
-    top: 2;
+    top: 100px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     border-style: inset;
@@ -133,15 +133,12 @@ html {
 }
 
 #ShopPic {
-    position: fixed;
-    
-    
-
+    position: fixed; 
 }
 #mushroomBox {
     position: relative;
-    top: 50px;
-    left: 20px;
+    top: 70px;
+    left: 80px;
     height: 79px;
     width: 79px;
     z-index: 1111111;
@@ -176,14 +173,14 @@ html {
     top: 400px;
 }
 
-#wooperSprite>.wooper {
+#wooperSprite>#wooper {
     position: relative;
     /* scale: 0.5; */
     width: 100%;
     height: auto;
 }
 
-#wooperSprite>.hat {
+#wooperSprite>#hat {
     position: relative;
     z-index: 1;
     /*makes sure the wooper stays on top  */
@@ -192,7 +189,7 @@ html {
     top: 50px;
 }
 
-#wooperSprite>.eleganthat {
+#wooperSprite>#eleganthat {
     position: relative;
     width: 150px;
     left: 30px;
@@ -201,7 +198,7 @@ html {
     /*makes sure the wooper stays on top  */
 }
 
-#wooperSprite>.croissantHat {
+#wooperSprite> #croissantHat {
     position: relative;
     width: 150px;
     left: 35px;
@@ -209,7 +206,7 @@ html {
     z-index: 1;
 }
 
-#wooperSprite>.donutHat {
+#wooperSprite> #donutHat {
     position: relative;
     width: 150px;
     left: 30px;
@@ -217,7 +214,7 @@ html {
     z-index: 1;
 }
 
-#wooperSprite>.santaHat {
+#wooperSprite> #santaHat {
     position: relative;
     width: 150px;
     left: 30px;
@@ -225,7 +222,7 @@ html {
     z-index: 1;
 }
 
-#wooperSprite>.rowletHat {
+#wooperSprite>#rowletHat {
     position: relative;
     width: 170px;
     height: 200px;   
@@ -236,14 +233,14 @@ html {
 }
 
 
-#wooperSprite>.bow {
+#wooperSprite>#bow {
     position: relative;
     width: 120px;
     left: 30px;
     top: 75px;
     z-index: 1;
 }
-#wooperSprite> .Headband{
+#wooperSprite> #Headband{
     position: relative;
     width: 90px;
     top: 63px;
@@ -272,7 +269,8 @@ html {
 #santaHatChanger,
 #RowletHatChange,
 #bowChanger,
-#headbandChanger {
+#headbandChanger,
+#hatbutton {
     align-items: center;
     background-color: rgb(185, 245, 255);
     border-color: rgb(110, 219, 128);
