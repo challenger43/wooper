@@ -10,20 +10,23 @@
 </head>
 
 <body class="wooper-page" id="scenery">
+    <audio loop src="woopermusic.mp3" autoplay></audio>
     <button id="hatbutton" onclick="show1()"> Hat Shop</button>
     <div id="hatbutton1">
         <div class="hat-buttons">
-            <button id="TopHatChanger" onclick="changeHat(1000,'tophat')">Top Hat Cost: 10</button>
-            <button id="headbandChanger" onclick="changeHat(2500,'headband')">Headband Cost: 25</button>
-            <button id="santaHatChanger" onclick="changeHat(5000,'santahat')">Santa Hat Cost: 50</button>
+            <button id="noHatChange" onclick="changeHat(0, 'noHat')"> Unequip hat</button>
+            <button id="TopHatChanger" onclick="changeHat(1000,'hat')">Top Hat Cost: 10</button>
+            <button id="headbandChanger" onclick="changeHat(2500,'Headband')">Headband Cost: 25</button>
+            <button id="santaHatChanger" onclick="changeHat(5000,'santaHat')">Santa Hat Cost: 50</button>
             <button id="bowChanger" onclick="changeHat(7500,'bow')"> Bow Cost: 75</button>
-            <button id="donutHatChanger" onclick="changeHat(10000,'donut')">Donut Hat Cost: 100</button>
-            <button id="CroissantChanger" onclick="changeHat(15000,'croissant')">Croissant Hat Cost: 150</button>
-            <button id="ElegantHatChange" onclick="changeHat(20000,'elegant')">Elegant Hat Cost: 200</button>
-            <button id="RowletHatChange" onclick="changeHat(50000, 'rowlet')"> Rowlet Hat Cost: 500</button>
+            <button id="donutHatChanger" onclick="changeHat(10000,'donutHat')">Donut Hat Cost: 100</button>
+            <button id="CroissantChanger" onclick="changeHat(15000,'croissantHat')">Croissant Hat Cost: 150</button>
+            <button id="ElegantHatChange" onclick="changeHat(20000,'eleganthat')">Elegant Hat Cost: 200</button>
+            <button id="RowletHatChange" onclick="changeHat(50000, 'rowletHat')"> Rowlet Hat Cost: 500</button>
             <!-- <a href="index.html" class="homebutton">"Please don't leave🥺"</a>  (Not used) -->
         </div>
     </div>
+    <button id="gamble" onclick="gamble()"> Gamble </button>
     <!-- <div id="randomMover">test</div> (this is a remnant of our original tester)-->
     <!-- This will be the button -->
     <div id="wooperContainer">
@@ -41,9 +44,6 @@
         </div>
     </div>
 
-    <audio src="woopermusic.mp3" autoplay></audio>
-
-
     <div class="money">
         <p id="money" class="woop-coin-display"> Woopcoin 0 </p>
         <img id="moneyclick" src="woop-coin.png" alt="Wooper Coin" />
@@ -51,10 +51,32 @@
     <div id="foodcost">
         <button id="shopbutton" class="shopbutton" onclick="show()">Shop</button>
         <div id="shop" hidden>
-            <img id="ShopPic" src="shop.png" alt="ShopMenu" />
             <div id="mushroomBox">
-                <span id="cost"> </span>
-                <img id="mushroom" onclick="moneyLeft()" src="mushroom1.png" alt="mushroomPic">
+                <div class="tooltip">
+                    <span class="tooltiptext">Buying the mushroom will give you an increase in click gain by 0.05 Woop
+                        Coins</span>
+                    <span id="cost"> </span>
+                    <img id="mushroom" onclick="moneyLeft()" src="mushroom1.png" alt="mushroomPic">
+
+                </div>
+                <div class="tooltip">
+
+                    <span class="tooltiptext">Buying the algae will give you an increase in click gain by 0.01 Woop
+                        Coins</span>
+                <span id="cost2"></span>
+                <img id="algae" onclick="algaeBuy()" src="algae.png" alt="algae">
+                
+            </div>
+                <span id="cost3"></span>
+                <div class="tooltip">
+
+                    <span class="tooltiptext">Buying the fish will give you an increase in click gain by 0.1 Woop
+                        Coins</span>
+                
+                <img id="fish" onclick="fishBuy()" src="fish.png" alt="fish">
+                </div>
+                <span id="cost4"></span>
+                <img id="WoopTreat" onclick="WoopTreatBuy()" src="WoopTreat.png" alt="Woop Treat">
             </div>
         </div>
 

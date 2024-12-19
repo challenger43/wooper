@@ -12,6 +12,8 @@
 
 let wooperSprite = document.getElementById("wooperSprite") //grabs wooperSprite from the html
 
+let paused = false
+
 const pixelsPerSecond = 150 //the amount of pixels wooper per second
 function moveWooperSprite() {
   console.log("woop")
@@ -19,26 +21,32 @@ function moveWooperSprite() {
   let curr = Math.floor(Math.random() * 1000)
   let direction = Math.sign(prev - curr) //sign makes it so it will either end up being -1 or positive 1, based on the value inside the parentheses
   let time = Math.abs(prev - curr) / pixelsPerSecond //takes the distance between wooper's previous location to wooper's current location, then dividing it by the pixels per second to find the total time wooper needs to get to the new location
-  wooperSprite.style.transitionDuration = time.toFixed(2) + "s" //links back to the css to control the wooper moving, s changes it to seconds and sets the time that css needs to move wooper
-  wooperSprite.style.left = curr + "px" //sets the current value to pixels
-  //if positive go left if negative go right
-  for (let child of wooperSprite.children) {
-    if (direction == -1 && !child.classList.contains("noFlip")) {
-      child.style.transform = "rotateY(180deg)";
-    } else {
-      child.style.transform = "rotateY(0deg)";
+  
+  if (!paused) {
+    wooperSprite.style.transitionDuration = time.toFixed(2) + "s" //links back to the css to control the wooper moving, s changes it to seconds and sets the time that css needs to move wooper
+    wooperSprite.style.left = curr + "px" //sets the current value to pixels
+    //if positive go left if negative go right
+    for (let child of wooperSprite.children) {
+      if (direction == -1 && !child.classList.contains("noFlip")) {
+        child.style.transform = "rotateY(180deg)";
+      } else {
+        child.style.transform = "rotateY(0deg)";
+      }
     }
   }
-  setTimeout(moveWooperSprite, time.toFixed(2) * 10000 + Math.random() * 2000) //sets the amount of time wooper must wait before each iteration of the function
+  setTimeout(moveWooperSprite, time.toFixed(2) * 1000 + Math.random() * 2000) //sets the amount of time wooper must wait before each iteration of the function
 }
-moveWooperSprite(); //you need to call the function to make it actually happen.
+moveWooperSprite();
 
-//techincally this is Khai's job but I had extra time so I(Isabella) decided to make the money sync up and update
+//technically this is Khai's job but I had extra time so I(Isabella) decided to make the money sync up and update
 let money = 0
 let woopcoin = "Woopcoin: "
 let purchase = 100
 let mushroomPrice = 5
-let multiplyer = 1
+let algaePrice = 1
+let fishPrice = 10
+let multiplier = 1
+let gOutcome = 0
 //those variables Khai made
 
 function moneyUpdate() {
@@ -48,47 +56,9 @@ function moneyUpdate() {
 
 setInterval(moneyUpdate, 1000)
 
-
-
-
-// Money - Khai
-//    Gets money from doing various things(like food)
-//     Can spend money on things such as stores etc
-//     Makes money with Wooper clicker (basically petting Wooper)
-
-
-function moneyCounter() {
-  money = money + multiplyer
-  document.getElementById("money").textContent = woopcoin + money / 100
-}
-
-document.getElementById("cost").textContent = "Cost: " + mushroomPrice / 100
-document.getElementById("mushroom")
-
-function moneyLeft() {
-  console.log("moneyLeft worked")
-
-  money = money - mushroomPrice
-
-  if (money < 0) {
-    document.getElementById("money").textContent = "FAILURE"
-    money = money * 10
-  }
-  else {
-    if (multiplyer == 1) {
-      multiplyer = multiplyer + 4
-    } else {
-      multiplyer = multiplyer + 5
-    }
-    document.getElementById("money").textContent = woopcoin + " " + money / 100
-    mushroomPrice = mushroomPrice * 2
-    document.getElementById("cost").textContent = "Cost: " + mushroomPrice / 100
-
-  }
-}
-
-
-
+function getRandomInt(max) {
+   return Math.floor(Math.random() * max);
+ }
 
 //Emi's Code
 
@@ -104,11 +74,138 @@ function show1() {
 }
 
 
-// Sydney CODE HERE
+
+// Money - Khai
+//    Gets money from doing various things(like food)
+//     Can spend money on things such as stores etc
+//     Makes money with Wooper clicker (basically petting Wooper)
+
+
+function moneyCounter() { //adds 5 cents
+  money = money + multiplier
+  document.getElementById("money").textContent = woopcoin + " " + money / 100
+}
+
+document.getElementById("cost").textContent = "Cost: " + mushroomPrice / 100
+document.getElementById("mushroom")
+
+function moneyLeft() {
+  console.log("moneyLeft worked")
+
+  money = money - mushroomPrice
+  function updateMoney() {
+    document.getElementById("money").textContent = woopcoin + " " + money / 100
+  }
+  if (money < 0) {
+    document.getElementById("money").textContent = "Not enough money"
+    money = money + mushroomPrice
+    setTimeout(updateMoney, 1000)
+
+  }
+  else {
+
+
+    multiplier = multiplier + 5
+    mushroomPrice = mushroomPrice * 3
+    updateMoney()
+  }
+
+
+
+  document.getElementById("cost").textContent = "Cost: " + mushroomPrice / 100
+
+}
+
+function algaeBuy() { //adds one cent
+  console.log("moneyLeft worked")
+
+  money = money - algaePrice
+
+
+
+  if (money < 0) {
+    document.getElementById("money").textContent = "Not enough money"
+    money = money + algaePrice
+    setTimeout(updateMoney, 1000)
+  }
+  else {
+    multiplier = multiplier + 1
+    algaePrice = algaePrice * 2
+    updateMoney()
+
+    document.getElementById("cost2").textContent = "Cost: " + algaePrice / 100
+  }
+
+}
+
+
+
+function fishBuy() { //adds 10 cents
+  console.log("moneyLeft worked")
+
+  money = money - fishPrice
+
+  if (money < 0) {
+    document.getElementById("money").textContent = "Not enough money"
+    money = money + fishPrice
+    setTimeout(updateMoney(), 1000)
+  }
+  else {
+    multiplier = multiplier + 10
+    fishPrice = fishPrice * 4
+    updateMoney()
+  }
+
+
+
+  document.getElementById("cost2").textContent = "Cost: " + algaePrice / 100
+}
+
+function oopTreatBuy() {
+  paused = true;
+  console.log("Bought WoopTreat")
+  setTimeout(function () {
+    paused = false;
+    console.log("unpaused")
+  }, 10000)
+
+ money = money - woopTreatPrice
+
+  if (money < 0){
+    document.getElementById("money").textContent = "Not enough money"
+  }
+}
+
+function gamble() {
+  money = money - 500
+
+  gOutcome = getRandomInt(1001)
+  console.log(gOutcome)
+  if (gOutcome == 1000) {
+    money = money + 100000
+    document.getElementById("money").textContent = "+1000"
+    setTimeout(updateMoney(), 1000)
+
+  } else {
+    document.getElementById("money").textContent = "+0"
+    setTimeout(moneyUpdate(), 1000)
+  }
+
+}
+
+
+// Sydney CODE HERE Isabella added some code here(to figure out how to make something bought so you don't have to buy it again)
 //  Putting clothes on wooper
 //      i.e hat needs to appear/disappear depending on which hat is selected in the store
 
 let hats = ["hat", "croissantHat", "eleganthat", "donutHat", "santaHat", "rowletHat", "bow", "Headband"]
+let owned_hats = []
+
+if (!owned_hats.includes(hat)) {
+  owned_hats.push(hat);
+}
+
+owned_hats.includes("hat")
 
 function changeHat(cost, newHat) {
   console.log("changing a hat with cost " + cost + " to hat " + newHat)
