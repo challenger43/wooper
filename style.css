@@ -173,10 +173,13 @@ html {
 
 #fish{
     width: 80px;
+    z-index: 1; 
+
 }
 
 #algae{
     width: 80px;
+    z-index: 1; 
 }
 
 #WoopTreat{
